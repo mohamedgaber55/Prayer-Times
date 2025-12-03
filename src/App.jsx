@@ -1,6 +1,5 @@
 import './App.css'
 import PrayerTime from './Components/PrayerTimes'
-// import Select from './Components/Select'
 
 function App() {
 
@@ -19,7 +18,6 @@ function App() {
       <div className='main text-right'> 
         <PrayerTime />
       </div>
-      {/* <Select /> */}
     </div>
   )
 }

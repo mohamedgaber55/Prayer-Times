@@ -7,16 +7,29 @@ export default function PrayerTime(){
   const [times, setTimes] = useState({});
   const [date, setDate] = useState('');
   const [city, setCity] = useState('');
+  
+  // get tody date 
+  const today = new Date();
+  const day = today.getDate();
+  const month = today.getMonth() + 1; // because monthes start from 0
+  const year = today.getFullYear();
+
+  const todyDate = `${day}-${month}-${year}`;
 
   // get data from api
-  useEffect(()=>{
-      fetch(`https://api.aladhan.com/v1/timingsByCity/01-12-2025?city=Eg&country=${city ? city : 'Cairo'}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setTimes(data.data.timings);
-        setDate(data.data.date.gregorian.date)
-      })
-  },[city]);
+  useEffect( ()=>{
+    try{
+        fetch(`https://api.aladhan.com/v1/timingsByCity/${todyDate}?city=Eg&country=${city ? city : 'Cairo'}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setTimes(data.data.timings);
+          setDate(data.data.date.gregorian.date);
+        })
+    }
+    catch(err){
+      console.log(err)
+    }
+  },[city, todyDate]);
 
   // transfer time from 24 to 12
   const from24To12 = (time24) => {
@@ -35,6 +48,8 @@ export default function PrayerTime(){
     return `${hour}:${minutes} ${pmOrAm}`
 
   }
+
+  console.log(date)
 
   // cities 
   const cities = {
