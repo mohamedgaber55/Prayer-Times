@@ -10,9 +10,8 @@
   min-height: 100vh;
 }
 @media (max-width: 667px) {
-  #root {
-    padding: 0;
+  .prayer {
+    background-size: cover;
   }
-  
 }
 
