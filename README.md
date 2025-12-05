@@ -16,3 +16,4 @@
 - Vite
 - Tailwind CSS
 - API: [Aladhan Prayer Times API](https://aladhan.com/prayer-times-api)
+(`https://api.aladhan.com/v1/timingsByCity/5-12-2025?city=Eg&country=Cairo}` 
