@@ -120,7 +120,7 @@ const cities = {
       <Time name={names.Maghrib} time={from24To12(times.Maghrib) || "--:--"}/>
       <Time name={names.Isha} time={from24To12(times.Isha) || "--:--"}/>
 
-      <div className="mt-4 sm:flex justify-between w-full">
+      <div className="mt-4 flex justify-between w-full">
         <p>الشروق: {from24To12(times.Sunrise) || "--:--"}</p>
         <p>الغروب: {from24To12(times.Sunset) || "--:--"}</p>
       </div>
