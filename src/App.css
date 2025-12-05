@@ -1,14 +1,12 @@
 :root{
-  --main-color : #e05d3c75;
-  --blured-color : #332a224a;
-  --border-color : #d7d7d74e;
+  --main-color : #00b0f780;
+  --blured-color : #1e2c354d;
+  --border-color : #e1e1e18f;
 }
-
-#root {
-  margin: 0 auto;
-  padding: 0 1rem;
+.prayer {
   background-image: url(/public/bg.jpg);
-  background-size: cover;
+  background-size: contain;
+  height: 100%;
   min-height: 100vh;
 }
 @media (max-width: 667px) {

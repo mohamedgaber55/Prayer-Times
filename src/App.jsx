@@ -4,8 +4,9 @@ import PrayerTime from './Components/PrayerTimes'
 function App() {
 
   return (
+    <div className='prayer'>
     <div className='container mx-auto px-4'>
-      <div className="main-header flex justify-center items-center p-0 mb-10 ">
+      <div className="main-header flex justify-center items-center p-0 mb-7 sm:mb-3 ">
         <h1 className='
             font-bold
             flex justify-center
@@ -18,6 +19,7 @@ function App() {
       <div className='main text-right'> 
         <PrayerTime />
       </div>
+    </div>
     </div>
   )
 }
